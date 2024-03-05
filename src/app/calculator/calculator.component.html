@@ -1,5 +1,6 @@
 <label for="peso">PESO</label>
-<input type="text" name="peso" id="peso">
+<input [(ngModel)]="peso" type="number" name="peso" id="peso" placeholder="Insira o peso em quilos">
 <label for="altura">ALTURA</label>
-<input type="text" name="altura" id="altura">
-<button>calculate</button>
+<input [(ngModel)]="altura" type="number" name="altura" id="altura" placeholder="Insira a altura em metros">
+<button (click)="calc()">calculate</button>
+{{result}}
