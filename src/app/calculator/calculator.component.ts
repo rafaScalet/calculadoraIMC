@@ -8,9 +8,31 @@ import { Component } from '@angular/core';
 export class CalculatorComponent {
   peso: any;
   altura: any;
-  result: any
+  result: number = 0;
+  state: string = "";
+  aux: boolean = false;
+  txt: string = ""
 
   calc(){
     this.result = this.peso / (this.altura)**2;
+
+    if(this.result <= 18.5){
+      this.state = "magreza";
+    }
+    else if(this.result <= 24.9){
+      this.state = "uma pessoa normal"
+    }
+    else if(this.result <= 29.9){
+      this.state = "sobrepeso"
+    }
+    else if(this.result <= 39.9){
+      this.state = "obesidade"
+    }
+    else if(this.result >= 40){
+      this.state = "obesidade grave"
+    }
+    this.aux = !this.aux;
+
+    this.txt = "seu estado é de " + this.state + " e seu IMC é: " + this.result
   }
 }
