@@ -1,6 +1,26 @@
-<label for="peso">PESO</label>
-<input [(ngModel)]="peso" type="number" name="peso" id="peso" placeholder="Insira o peso em quilos">
-<label for="altura">ALTURA</label>
-<input [(ngModel)]="altura" type="number" name="altura" id="altura" placeholder="Insira a altura em metros">
-<button (click)="calc()">calculate</button>
-<p>{{txt}}</p>
+<div class="d-flex justify-content-center align-items-center vh-100">
+
+  <div class="card" style="width: 18rem;">
+    <div *ngIf="img !== 'insira os valores acima'">
+      <img src="{{img}}" class="card-img-top">
+    </div>
+    <div class="container-fluid text-center">
+      <div class="container-fluid text-center">
+        <label for="peso">PESO</label>
+        <br>
+        <input [(ngModel)]="peso" type="number" name="peso" id="peso" placeholder="Insira o peso em quilos">
+      </div>
+      <div class="container-fluid text-center">
+        <label for="altura">ALTURA</label>
+        <br>
+        <input [(ngModel)]="altura" type="number" name="altura" id="altura" placeholder="Insira a altura em metros">
+      </div>
+      <button style="margin: 0.5rem;" type="button" class="btn btn-success" (click)="calc()">calculate</button>
+      <div style="margin-bottom: 1rem;" class="card">
+        <div class="card-body">
+          {{txt}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
