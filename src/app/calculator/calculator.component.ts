@@ -39,6 +39,6 @@ export class CalculatorComponent {
     }
     this.aux = !this.aux;
 
-    this.txt = "seu estado é de " + this.state + " e seu IMC é: " + this.result
+    this.txt = "seu estado é de " + this.state + " e seu IMC é: " + this.result.toFixed(2);
   }
 }
